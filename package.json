@@ -1,0 +1,13 @@
+{
+  "name": "covid-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "新冠疫情时间轴地图 —— 真实 CSV 数据可视化（零依赖）",
+  "scripts": {
+    "data": "node tools/prepare-data.mjs",
+    "test": "node tools/core.test.mjs",
+    "verify": "node tools/verify.mjs",
+    "start": "node tools/serve.mjs"
+  }
+}

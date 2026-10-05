@@ -1,0 +1,5 @@
+播放前: {"metric":"cases","index":164,"date":"2023-03-09","log":true,"theme":"warm","selected":5,"playing":false,"draws":2,"world":676456135,"top":["840:103802702","356:44690738","250:39866718"]}
+播放后: {"metric":"cases","index":5,"date":"2020-02-26","log":true,"theme":"warm","selected":5,"playing":false,"draws":8,"world":80679,"top":["156:78166","410:1261","380:453"]}
+地图像素: {"colors":328,"samples":11639,"size":[1082,398]}
+控制台: error: Failed to load resource: the server responded with a status of 404 (Not Found)
+截图: qa-shots/live-preview.png + live-full.png

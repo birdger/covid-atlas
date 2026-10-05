@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="warm">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>疫情地图 · 时间轴 | covid-atlas</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1>疫情地图 · 时间轴</h1>
+    <p class="sub" id="source-line">约翰斯·霍普金斯大学 CSSE 公开数据（周频 · 191 国）</p>
+  </div>
+
+  <div class="metric-group" id="metric-group" role="tablist" aria-label="指标"></div>
+
+  <div class="toggles">
+    <button id="btn-scale" class="chip" title="快捷键 L">对数刻度</button>
+    <button id="btn-theme" class="chip" title="快捷键 T">夜色</button>
+  </div>
+</header>
+
+<main class="app">
+  <section class="panel map-panel">
+    <canvas id="map" aria-label="世界地图分级着色"></canvas>
+    <div id="map-tip" class="tip" hidden></div>
+    <p class="hint">点地图上的国家加入下方折线对比 · 滚过看数值</p>
+  </section>
+
+  <aside class="panel side">
+    <h2>排行榜 <span class="muted" id="rank-date"></span></h2>
+    <ol id="rank-list" class="rank"></ol>
+
+    <h2>对比国家 <span class="muted" id="sel-count"></span></h2>
+    <div id="chips" class="chips"></div>
+    <div class="search-wrap">
+      <input id="search" type="search" placeholder="搜索国家…" autocomplete="off" aria-label="搜索国家">
+      <div id="suggest" class="suggest" hidden></div>
+    </div>
+  </aside>
+
+  <section class="panel chart-panel">
+    <div class="chart-head">
+      <h2 id="chart-title">折线对比</h2>
+      <span class="muted" id="chart-sub"></span>
+    </div>
+    <canvas id="chart" aria-label="多序列折线图"></canvas>
+    <div id="chart-tip" class="tip" hidden></div>
+  </section>
+</main>
+
+<footer class="timeline">
+  <button id="play" class="play" aria-label="播放或暂停">▶</button>
+  <input id="slider" type="range" min="0" max="164" value="0" step="1" aria-label="时间轴">
+  <div class="clock">
+    <strong id="cur-date">2020年1月22日</strong>
+    <span id="world-total" class="muted"></span>
+  </div>
+  <select id="speed" aria-label="播放速度">
+    <option value="500">慢</option>
+    <option value="220" selected>中</option>
+    <option value="90">快</option>
+  </select>
+</footer>
+
+<p class="foot-note">
+  键盘：空格 播放/暂停 · ← → 前后一周 · 1–5 切指标 · L 对数 · T 主题
+</p>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
